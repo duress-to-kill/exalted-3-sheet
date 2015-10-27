@@ -1,0 +1,287 @@
+% This LaTeX document written 10/2015 by Andrew Wood.
+% http://github.com/mongolsamurai/
+%
+% Written for and tested with pdflatex on Debian Linux
+% pdfTeX 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian)
+%
+% NOTE:
+% Everything before "\begin{document}" is document parameters and custom
+%   macros. It is not intended for editing, unless you know what you're doing.
+%
+
+\documentclass[12pt]{article}
+\usepackage[hmargin=0.5in,vmargin=0.25in]{geometry}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{placeins}
+
+\setlength\parindent{0pt}
+
+% Internal macros
+\newcommand{\e}{\fullmoon}
+\newcommand{\f}{\newmoon}
+\newcommand{\spacer}{\hspace{4pt}\hrulefill\hspace{4pt}}
+\newcommand{\logo}{\includegraphics[scale=0.25]{ex3_logo.jpg}}
+
+% Symbol decorator macros
+\newcommand{\N}{$\square$\hspace{4pt}}
+\newcommand{\C}{$\sun$\hspace{4pt}}
+\newcommand{\F}{$\heartsuit$\hspace{4pt}}
+\newcommand{\s}{$\bigstar$\hspace{4pt}}
+\newcommand{\0}{\e\e\e\e\e}
+\newcommand{\1}{\f\e\e\e\e}
+\newcommand{\2}{\f\f\e\e\e}
+\newcommand{\3}{\f\f\f\e\e}
+\newcommand{\4}{\f\f\f\f\e}
+\newcommand{\5}{\f\f\f\f\f}
+
+% Pool drawing macros
+\newcommand{\pone}{\N}
+\newcommand{\ptwo}{\N\N}
+\newcommand{\pthree}{\N\N\N}
+\newcommand{\pfour}{\N\N\N\N}
+\newcommand{\pfive}{\N\N\N\N\N}
+\newcommand{\pten}{$\square\square\square\square\square\square\square\square\square\square$}
+\newcommand{\pfield}[1]{\rule[-3pt]{30pt}{0.4pt} / {#1}}
+
+% Section and entry macros
+\newcommand{\property}[2]{{\footnotesize#1}\hspace{8pt}\hrulefill\hspace{8pt}{\scriptsize\em#2}\normalsize\par}
+\newcommand{\score}[2]{{\footnotesize#1\normalsize}\spacer{#2}\par}
+\newcommand{\pool}[2]{{\footnotesize#1\normalsize}\hfill{#2}\par}
+\newcommand{\sectionheader}[1]{\hrulefill\hspace{14pt}{#1}\hspace{14pt}\hrulefill}
+\newcommand{\columnheader}[1]{\hrulefill\hspace{8pt}{\small\em#1}\hspace{8pt}\hrulefill\par}
+\newcommand{\sheetheader}[2]{\raisebox{32px}{\LARGE#1}\hfill\logo\par\raisebox{24px}[0px][0px]{\em#2}\par\vspace{-20pt}}
+\newcommand{\blankline}{\vspace{12pt}}
+\newcommand{\nextcolumn}{\vfill\columnbreak}
+
+%
+% Character sheet contents are defined from here down.
+%
+% Note that everything that follows a '%' on a line is a comment for your
+%   benefit, and won't affect the compiled sheet in any way. Triple comments
+%   (%%%) are for readability only, they mark the end of a section or column.
+%   You can add your own comments freely, e.g. to take notes during a game.
+%
+% Also note: LaTeX commands start with '\'. Nearly all of the commands below are
+%   macros defined in the header section above. An itemized summary is provided
+%   in comments at the bottom of this document, for your convenience 
+%
+% As a general rule, you can rearrange or remove sections of the character
+%   sheet if needed. Indented sections usually represent a major segment of the
+%   sheet. You can rearrange these chunks, but don't break them up. Contents
+%   within a column can be rearranged, remove, or added to usually without any
+%   trouble, but be aware of where your forced column breaks are (\nextcolumn).
+%
+% A final note for editors who aren't familiar with working with source code, I
+%   highly recommend using a syntax-aware text editor for working with this
+%   file. On Windows, a free and easy-to-install option is Notepad++. Mac has
+%   numerous options, but I don't know any well enough to recommend one.
+%   You'll want an editor that does syntax hilighting for LaTeX documents, it
+%   makes this much easier to read.
+%   For the love of god, don't use a word processor to work with this file,
+%   it's very likely it will inject a bunch of crap that makes your LaTeX
+%   compiler choke.
+%
+
+\begin{document}
+  %%%
+  \sheetheader{Sleep of Reason}{Day-Caste Abyssal}
+  %%%
+  \sectionheader{Attributes}
+  \begin{multicols}{3}
+    \score{Strength}{\4}
+    \score{Dexterity}{\4}
+    \score{Stamina}{\3}
+    %%%
+    \score{Charisma}{\3}
+    \score{Manipulation}{\3}
+    \score{Appearance}{\4}
+    %%%
+    \score{Perception}{\3}
+    \score{Intelligence}{\2}
+    \score{Wits}{\2}
+  \end{multicols}
+  %%%
+  \sectionheader{Abilities}
+  % \s - supernal ability
+  \begin{multicols}{3}
+    {\N}\score{Archery}{\0}
+    {\C}\score{Athletics}{\2}
+    {\C}\score{Awareness}{\3}
+    {\N}\score{Brawl}{\0}
+    {\N}\score{Bureaucracy}{\0}
+    {\N}\score{Dodge}{\0}
+    {\N}\score{Integrity}{\1}
+    {\F}\score{Investigation}{\3}
+    {\s}\score{Larceny}{\4}
+    {\F}\score{Linguistics}{\2}
+    {\F}\score{Lore}{\2}
+    {\N}\score{Medicine}{\0}
+    {\F}\score{Melee}{\3}
+    {\N}\score{Occult}{\0}
+    {\N}\score{Performance}{\2}
+    {\F}\score{Presence}{\2}
+    {\N}\score{Resistance}{\0}
+    {\C}\score{Ride}{\3}
+    {\N}\score{Sail}{\0}
+    {\N}\score{Socialize}{\1}
+    {\C}\score{Stealth}{\3}
+    {\N}\score{Survival}{\0}
+    {\N}\score{Thrown}{\0}
+    {\N}\score{War}{\0}
+  \end{multicols}
+  %%%
+%
+% NOTE: the next section (crafts and MA styles) is disable by default. This is
+%   for characters who don't have either skill. If you need these fields, on
+%   the next uncommented line change "\iffalse" to "\iftrue" to enable them.
+%
+% If you do, and you have lots of charms or merits, you may have to a problem
+%   text overflowing onto the next page. If so, you may want to rearrange your
+%   sections, or else you might need to push a section onto page 2. You can do
+%   this cleanly by forcing a page break with the '\pagebreak' command.
+%
+  \iffalse
+  \begin{multicols}{2}
+    \columnheader{Crafts}
+    {\N}\score{Shrubbery Retrieval}{\2}
+    {\N}\score{Underwater Basket Weaving}{\5}
+    {\N}\score{Calligraphy}{\0}
+    \nextcolumn
+    %%%
+    \columnheader{Martial Arts}
+    {\N}\score{Pants-On-Head-Retarded Style}{\1}
+    {\N}\score{Howling Fox Style}{\3}
+    {\N}\score{Tree-Born Kettle Girl Style}{\3}
+    \vfill
+  \end{multicols}
+  \fi
+  %%%
+  \begin{multicols}{3}
+    \columnheader{Specialties}
+    \property{Presence}{Abstractly romantic gestures}
+    \property{Socialize}{Passion-filled personal matters}
+    \property{Athletics}{Gymnastic maneuvers}
+    \property{Lore}{Current events in the North}
+    \nextcolumn
+    %%%
+    \columnheader{Merits}
+    \score{Resources}{\2}
+    \score{Retainer}{\2}
+    \score{Backing}{\3}
+    \score{Language}{\2}
+    \score{Followers}{\1}
+    \nextcolumn
+    %%%
+    \columnheader{Possessions}
+    \property{Rapier}{Acc +2, Dam 9L, Parry 5}
+    \property{Velvet Suit}{outmoded, black /w lace}
+    \property{Lock Picks}{leather case in boot}
+    \property{Cigarettes}{with stem and matches}
+  \end{multicols}
+  %%%
+  \sectionheader{Charms}
+  \begin{multicols}{2}
+    \property{Graceful Crane Stance}{3m, Reflexive, Scene}
+    \property{Monkey Leap Technique}{2m, Supplemental, Instant}
+    \property{Sensory Acuity Prana}{5m, Reflexive, Scene}
+    \property{Keen Taste and Smell Technique}{3(6)m 1w, Simple, Scene}
+    \property{Watchman's Infallible Eye}{---, Permanent}
+    \property{Crafty Observation Method}{5m, Simple, Instant}
+    \property{Seasoned Criminal Method}{---, Permanent}
+    \property{Spurious Presence}{6m, Reflexive, Scene}
+    \property{Flawless Pickpocketing Technique}{3m, Supplemental, Instant}
+    \property{Flawlessly Impenetrable Disguise}{6m, Simple, Until sleep}
+    \property{Excellent Strike}{3m, Supplemental, Instant}
+    \property{Dipping Swallow Defense}{2m, Reflexive, Instant}
+    \property{Harmonious Presence Meditation}{5(7)m, Reflexive, Scene}
+    \property{Master Horseman's Techniques}{---, Permanent}
+    \property{Flashing Thunderbolt Steed}{4m, Reflexive, One hour}
+    \property{Wind-Racing Essence Infusion}{2(4)m 1w, Reflexive, Instant}
+    \property{Perfect Shadow Stillness}{1m 1w, Reflexive, Instant}
+  \end{multicols}
+  %%%
+  \setlength{\columnsep}{24pt}
+  \begin{multicols}{3}
+    \columnheader{Essence}
+    \pool{Essence}{\1}
+    \pool{Personal Essence}{\pfield{13}}
+    \pool{Peripheral Essence}{\pfield{33}}
+    \pool{Committed Essence}{---}
+    \blankline
+    \pool{Willpower}{\5\0}
+    \pool{Temp Will}{\pten}
+    \nextcolumn
+    \columnheader{Combat Values}
+    \property{Join Battle}{5 + 3 successes}
+    \property{Parry (rapier)}{4}
+    \property{Evasion}{2}
+    \property{Soak}{3}
+    \blankline
+    \property{Resolve}{2}
+    \property{Guile}{2}
+    \nextcolumn
+    \columnheader{Health Pool}
+    \pool{-0}{\pone}
+    \pool{-1}{\ptwo}
+    \pool{-2}{\ptwo}
+    \pool{-4}{\pone}
+    \pool{Incap}{\pone}
+  \end{multicols}
+%
+% This last section is currently unfinished, it will be the character sheet back page.
+%
+  \iffalse
+  %%%
+  \pagebreak
+  \sectionheader{Intimacies}
+  \begin{multicols}{2}
+    \columnheader{Ties}
+    \nextcolumn
+    %%%
+    \columnheader{Principles}
+  \end{multicols}
+  \fi
+  %%%
+\end{document}
+%
+% Macro Guide:
+%
+% - \sheetheader{Title}{Subtitle}: places a two-line title section, with the Ex3
+%     logo on the right. I use the subtitle for stating the character's exalt
+%     type and caste, but you can use it for whatever you like.
+%
+% - \sectionheader{Section Title}: places a broken horizontal rule with a title
+%     in the center. It will expand to the width of the frame it's in, which
+%     usually means the width of the page. It will shrink to fit in a column if
+%     you put it into one.
+%
+% - \columnheader{Column Title}: like \sectionheader, except the title font is
+%     smaller, and italicised.
+%
+% - \begin{multicols}{n}: starts a page section that's divided into n columns.
+%     This command is part of the multicols package, I can't take credit for it.
+%
+% - \end{multicols}: ends the most recent open column-divided page section. This
+%     command is part of the multicols package, I can't take credit for it.
+%
+% - \nextcolumn: forces text to flow to the next column over after this line,
+%     instead of trying to divide text as evenly as possible between columns.
+%
+% - \score{Name}{Rating}: makes a generic Exalted-style score in something.
+%     This will expand to width, like \sectionheader. You can put text in the
+%     Rating field, but it probably won't look good. See \property.
+%
+% - \property{Name}{Value}: like \score, except it assumes the value is text,
+%     instead of a bubble sequence. The font size is smaller, and italicized.
+%
+% - \C, \F, \s, \N: inserts a symbol indicating caste, favored, supernal, or
+%     normal (i.e. non-favored) skills.
+%
+% - \0, \1...\5: creates a sequence of 5 bubbles with the correspending number
+%     filled in black. If you need a 10-bubble sequence (e.g. for willpower),
+%     these can be concatenated together ({\5\2 will create a score of 7}.
+%
