@@ -88,120 +88,125 @@
 
 \begin{document}
   %%%
-  \sheetheader{Sleep of Reason}{Day-Caste Abyssal}
+  \sheetheader{}{}
   %%%
   \sectionheader{Attributes}
   \begin{multicols}{3}
-    \score{Strength}{\4}
-    \score{Dexterity}{\4}
-    \score{Stamina}{\3}
+    \score{Strength}{\0}
+    \score{Dexterity}{\0}
+    \score{Stamina}{\0}
     %%%
-    \score{Charisma}{\3}
-    \score{Manipulation}{\3}
-    \score{Appearance}{\4}
+    \score{Charisma}{\0}
+    \score{Manipulation}{\0}
+    \score{Appearance}{\0}
     %%%
-    \score{Perception}{\3}
-    \score{Intelligence}{\2}
-    \score{Wits}{\2}
+    \score{Perception}{\0}
+    \score{Intelligence}{\0}
+    \score{Wits}{\0}
   \end{multicols}
   %%%
   \sectionheader{Abilities}
   % \s - supernal ability
   \begin{multicols}{3}
     {\N}\score{Archery}{\0}
-    {\C}\score{Athletics}{\2}
-    {\C}\score{Awareness}{\3}
+    {\C}\score{Athletics}{\0}
+    {\C}\score{Awareness}{\0}
     {\N}\score{Brawl}{\0}
     {\N}\score{Bureaucracy}{\0}
     {\N}\score{Dodge}{\0}
-    {\N}\score{Integrity}{\1}
-    {\F}\score{Investigation}{\3}
-    {\s}\score{Larceny}{\4}
-    {\F}\score{Linguistics}{\2}
-    {\F}\score{Lore}{\2}
+    {\N}\score{Integrity}{\0}
+    {\F}\score{Investigation}{\0}
+    {\s}\score{Larceny}{\0}
+    {\F}\score{Linguistics}{\0}
+    {\F}\score{Lore}{\0}
     {\N}\score{Medicine}{\0}
-    {\F}\score{Melee}{\3}
+    {\F}\score{Melee}{\0}
     {\N}\score{Occult}{\0}
-    {\N}\score{Performance}{\2}
-    {\F}\score{Presence}{\2}
+    {\N}\score{Performance}{\0}
+    {\F}\score{Presence}{\0}
     {\N}\score{Resistance}{\0}
-    {\C}\score{Ride}{\3}
+    {\C}\score{Ride}{\0}
     {\N}\score{Sail}{\0}
-    {\N}\score{Socialize}{\1}
-    {\C}\score{Stealth}{\3}
+    {\N}\score{Socialize}{\0}
+    {\C}\score{Stealth}{\0}
     {\N}\score{Survival}{\0}
     {\N}\score{Thrown}{\0}
     {\N}\score{War}{\0}
   \end{multicols}
   %%%
 %
-% NOTE: the next section (crafts and MA styles) is disable by default. This is
-%   for characters who don't have either skill. If you need these fields, on
-%   the next uncommented line change "\iffalse" to "\iftrue" to enable them.
-%
-% If you do, and you have lots of charms or merits, you may have to a problem
-%   text overflowing onto the next page. If so, you may want to rearrange your
-%   sections, or else you might need to push a section onto page 2. You can do
-%   this cleanly by forcing a page break with the '\pagebreak' command.
+        % NOTE: the next section (crafts and MA styles) is disabled by default. This
+        %   is for characters who don't have either skill. If you need this section,
+        %   on the next uncommented line change "\iffalse" to "\iftrue" to enable it.
+        %
+        % If you do, and you have lots of charms or merits, you may have to a problem
+        %   text overflowing onto the next page. If so, you may want to rearrange your
+        %   sections, or else you might need to push a section onto page 2. You can do
+        %   this cleanly by forcing a page break with the '\pagebreak' command.
 %
   \iffalse
   \begin{multicols}{2}
-    \columnheader{Crafts}
-    {\N}\score{Shrubbery Retrieval}{\2}
-    {\N}\score{Underwater Basket Weaving}{\5}
-    {\N}\score{Calligraphy}{\0}
-    \nextcolumn
-    %%%
-    \columnheader{Martial Arts}
-    {\N}\score{Pants-On-Head-Retarded Style}{\1}
-    {\N}\score{Howling Fox Style}{\3}
-    {\N}\score{Tree-Born Kettle Girl Style}{\3}
-    \vfill
+        \columnheader{Crafts}
+        {\N}\score{Shrubbery Retrieval}{\2}
+        {\N}\score{Underwater Basket Weaving}{\5}
+        {\N}\score{Calligraphy}{\0}
+        \nextcolumn
+        %%%
+        \columnheader{Martial Arts}
+        {\N}\score{Pants-On-Head-Retarded Style}{\1}
+        {\N}\score{Howling Fox Style}{\3}
+        {\N}\score{Tree-Born Kettle Girl Style}{\3}
+        \vfill
   \end{multicols}
   \fi
   %%%
+  % The following three-column segment (containing the Specialities, Merits, and
+  %   Possessions sections) is fill-to-suit. Each section contains four sample
+  %   entries to demonstrate syntax. You should modify each \property or \score
+  %   and add or remove lines as appropriate for your character.
+  % The possessions column is largely intended for recording short-hand notes on
+  %   the combat statistics of any weapons and armor for quick reference. It may
+  %   not be useful for some characters. For purposes of page layout, it should
+  %   be kept no longer than the longest of the other two columns, or you may
+  %   push later sections of onto an additional page. If you don't have any gear
+  %   to record here, you can change the column header and use it for something
+  %   else, or just delete the whole column (and the preceding "\nextcolumn" line)
+  %   and change the column count from 3 to 2 on the line directly below this note.
   \begin{multicols}{3}
     \columnheader{Specialties}
-    \property{Presence}{Abstractly romantic gestures}
-    \property{Socialize}{Passion-filled personal matters}
-    \property{Athletics}{Gymnastic maneuvers}
-    \property{Lore}{Current events in the North}
+    \property{Presence}{While upside down}
+    \property{Socialize}{Frogmen}
+    \property{Athletics}{Exercising}
+    \property{Lore}{Baseball statistics, 1978-1990}
     \nextcolumn
     %%%
     \columnheader{Merits}
-    \score{Resources}{\2}
-    \score{Retainer}{\2}
-    \score{Backing}{\3}
-    \score{Language}{\2}
-    \score{Followers}{\1}
+    \score{Shoe Swallowing}{\1}
+    \score{Freestyle Aerial Debate}{\3}
+    \score{Quick-Drying}{\2}
+    \score{Multi-Track Drifting}{\5}
     \nextcolumn
     %%%
     \columnheader{Possessions}
     \property{Rapier}{Acc +2, Dam 9L, Parry 5}
-    \property{Velvet Suit}{outmoded, black /w lace}
-    \property{Lock Picks}{leather case in boot}
-    \property{Cigarettes}{with stem and matches}
+    \property{Trained Monkey}{with fez and sequined vest}
+    \property{E-cigs}{with lighter}
+    \property{Hope Diamond}{yes, that Hope Diamond}
   \end{multicols}
   %%%
+  % This section wraps  across two columns, and will grow in length as your
+  %   character advances in power. Powerful Exalted may find that they run out
+  %   of room ona  page for thier charms, especially if they also have martial
+  %   arts styles or craft skills. In this case, you may choose to move the
+  %   charms section down the page to below the break, and have your charms
+  %   appear on page 2. There is no other convenient solution, unless you care
+  %   to do significant surgey on the document formatting.
   \sectionheader{Charms}
   \begin{multicols}{2}
     \property{Graceful Crane Stance}{3m, Reflexive, Scene}
     \property{Monkey Leap Technique}{2m, Supplemental, Instant}
     \property{Sensory Acuity Prana}{5m, Reflexive, Scene}
     \property{Keen Taste and Smell Technique}{3(6)m 1w, Simple, Scene}
-    \property{Watchman's Infallible Eye}{---, Permanent}
-    \property{Crafty Observation Method}{5m, Simple, Instant}
-    \property{Seasoned Criminal Method}{---, Permanent}
-    \property{Spurious Presence}{6m, Reflexive, Scene}
-    \property{Flawless Pickpocketing Technique}{3m, Supplemental, Instant}
-    \property{Flawlessly Impenetrable Disguise}{6m, Simple, Until sleep}
-    \property{Excellent Strike}{3m, Supplemental, Instant}
-    \property{Dipping Swallow Defense}{2m, Reflexive, Instant}
-    \property{Harmonious Presence Meditation}{5(7)m, Reflexive, Scene}
-    \property{Master Horseman's Techniques}{---, Permanent}
-    \property{Flashing Thunderbolt Steed}{4m, Reflexive, One hour}
-    \property{Wind-Racing Essence Infusion}{2(4)m 1w, Reflexive, Instant}
-    \property{Perfect Shadow Stillness}{1m 1w, Reflexive, Instant}
   \end{multicols}
   %%%
   \setlength{\columnsep}{24pt}
@@ -217,13 +222,15 @@
     \nextcolumn
     \columnheader{Combat Values}
     \property{Join Battle}{5 + 3 successes}
-    \property{Parry (rapier)}{4}
+    \property{Parry (rapier)}{5}
     \property{Evasion}{2}
     \property{Soak}{3}
     \blankline
     \property{Resolve}{2}
     \property{Guile}{2}
     \nextcolumn
+    % If your health pool changes, you can modify the pool capacity by using the
+    %   pool-drawing macros. See the Macro Guide below for more details.
     \columnheader{Health Pool}
     \pool{-0}{\pone}
     \pool{-1}{\ptwo}
@@ -284,4 +291,10 @@
 % - \0, \1...\5: creates a sequence of 5 bubbles with the correspending number
 %     filled in black. If you need a 10-bubble sequence (e.g. for willpower),
 %     these can be concatenated together ({\5\2 will create a score of 7}.
+%
+% - \pone, \ptwo, ... \pfive, \pten: creates the specified number of empty
+%     boxes, suitable for tracking pools that can be expended, such as your
+%     health track, willpower pool, and similar such variables.
+%     pool sizes available are 1 thru 5, and 10, as with the score macros
+%     listed above.
 %
